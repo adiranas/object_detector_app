@@ -77,6 +77,10 @@ class WebcamVideoStream:
         # indicate that the thread should be stopped
         self.stopped = True
 
+    def getSize(self):
+        self.width = int(self.stream.get(cv2.CAP_PROP_FRAME_WIDTH) + 0.5)
+        self.height = int(self.stream.get(cv2.CAP_PROP_FRAME_HEIGHT) + 0.5)
+        return (self.width, self.height)
 
 def standard_colors():
     colors = [
