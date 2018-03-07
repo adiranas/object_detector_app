@@ -146,9 +146,9 @@ if __name__ == '__main__':
     parser.add_argument('-src', '--source', dest='video_source', type=str,
                         default=0, help='Device index of the camera.')
     parser.add_argument('-wd', '--width', dest='width', type=int,
-                        default=1920, help='Width of the frames in the video stream.')
+                        default=1280, help='Width of the frames in the video stream.')
     parser.add_argument('-ht', '--height', dest='height', type=int,
-                        default=1080, help='Height of the frames in the video stream.')
+                        default=720, help='Height of the frames in the video stream.')
     parser.add_argument('-num-w', '--num-workers', dest='num_workers', type=int,
                         default=2, help='Number of workers.')
     parser.add_argument('-q-size', '--queue-size', dest='queue_size', type=int,
@@ -183,9 +183,7 @@ if __name__ == '__main__':
 
         output_rgb = cv2.cvtColor(output_q.get(), cv2.COLOR_RGB2BGR)
         resized_image = cv2.resize(output_rgb, (args.width, args.height)) 
-        video_writer.write(resized_image)
-        #cv2.imwrite("frame%d.jpg" % count, output_rgb)
-        #count = count+1
+        # video_writer.write(resized_image)
         cv2.imshow('Object Detection', output_rgb)
         fps.update()
 
