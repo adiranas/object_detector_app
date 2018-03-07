@@ -90,3 +90,14 @@ ENV/
 
 # Custom
 .idea/
+object_detection/data/gun_label_map.pbtxt
+.DS_Store
+object_detection/gunsmodel/frozen_inference_graph.pb
+*.pb
+*.pb
+object_detection/ssd_mobilenet_v1_coco_11_06_2017/frozen_inference_graph.pb
+*.data-00000-of-00001
+object_detection/ssd_mobilenet_v1_coco_2017_11_17/checkpoint
+object_detection/ssd_mobilenet_v1_coco_2017_11_17/model.ckpt.index
+object_detection/ssd_mobilenet_v1_coco_2017_11_17/model.ckpt.meta
+*.mp4
